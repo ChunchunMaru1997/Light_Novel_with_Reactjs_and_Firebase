@@ -83,7 +83,6 @@ const HomeScreen = () => {
 
   return (
     <div>
-      <Header />
       <div
         className="home-screen-container"
         style={{

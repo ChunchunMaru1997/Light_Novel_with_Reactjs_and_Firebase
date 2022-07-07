@@ -44,13 +44,13 @@ const Header = () => {
                   href="#"
                   style={{ display: "inline - flex" }}
                 >
-                  Thể loại
-                  <div className="dropdown">
-                    <div
+                  Thể loại {"  "}
+                  <span className="dropdown">
+                    <span
                       className="dropdown-toggle"
                       data-mdb-toggle="dropdown"
                       aria-expanded="false"
-                    ></div>
+                    ></span>
                     <ul
                       className="dropdown-menu"
                       aria-labelledby="dropdownMenuButton"
@@ -71,7 +71,7 @@ const Header = () => {
                         </div>
                       </li>
                     </ul>
-                  </div>
+                  </span>
                 </a>
               </li>
               <li className="nav-item">
