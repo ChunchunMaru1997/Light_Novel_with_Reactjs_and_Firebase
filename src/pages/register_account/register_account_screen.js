@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Route, useNavigate } from "react-router-dom";
+import { BrowserRouter as useNavigate } from "react-router-dom";
 import { createNewAccount } from "../../data/repository/user_repository";
 import InputApp from "../util/component/input_app";
 import {

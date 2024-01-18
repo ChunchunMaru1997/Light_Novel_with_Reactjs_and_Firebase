@@ -2,7 +2,15 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  orderBy,
+  query,
+  setDoc,
+} from "firebase/firestore";
 import { firebaseAuth, firebaseStore } from "../remote/config/firebase_config";
 
 const USER_COLLECTION = "user";
@@ -51,3 +59,24 @@ export async function login(email, password) {
     return { error: e.message };
   }
 }
+
+export const getAllUser = async () => {
+  try {
+    const q = query(
+      collection(firebaseStore, USER_COLLECTION),
+      orderBy("username")
+    );
+
+    let users = (await getDocs(q)).docs.map((doc) => ({
+      id: doc.id,
+      username: doc.data().username,
+      email: doc.data().email,
+    }));
+
+    return { users: users };
+  } catch (error) {
+    console.log(error);
+    console.log(error.message);
+    return { error: error.message };
+  }
+};

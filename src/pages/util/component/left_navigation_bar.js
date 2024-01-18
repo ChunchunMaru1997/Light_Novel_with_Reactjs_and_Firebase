@@ -13,7 +13,13 @@ export default function LeftNavigationBar() {
       icon: "fa fa-book",
       title: "Sách",
     },
+    {
+      routePath: "user",
+      icon: "fas fa-user",
+      title: "Người dùng",
+    },
   ];
+
   const handleItemClick = (indexSelected) => {
     setHandleItemSelect(
       itemBars.map((item, index) => (
@@ -29,6 +35,7 @@ export default function LeftNavigationBar() {
       ))
     );
   };
+
   const [itemBarsView, setHandleItemSelect] = useState(
     itemBars.map((item, index) => (
       <ItemNavigationBar

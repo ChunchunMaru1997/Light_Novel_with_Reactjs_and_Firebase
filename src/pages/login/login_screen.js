@@ -1,7 +1,7 @@
 import { areCookiesEnabled } from "@firebase/util";
 import React, { useState } from "react";
 import { useCookies } from "react-cookie";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { login } from "../../data/repository/user_repository";
 import InputApp from "../util/component/input_app";
 

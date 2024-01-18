@@ -1,6 +1,7 @@
 export const validateUserName = (username) => {
   return username.trim != "" && username;
 };
+
 export const validateEmail = (email) => {
   return String(email)
     .toLowerCase()
