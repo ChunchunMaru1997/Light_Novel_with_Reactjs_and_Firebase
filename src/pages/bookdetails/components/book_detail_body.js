@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const BookDetailBody = () => {
   const tab = [
@@ -23,6 +24,7 @@ const BookDetailBody = () => {
       >
         {tabOption.map((tab, index) => (
           <li
+            key={index}
             className={
               "nav-item nav-link px-0 py-3 m-4 " +
               (tab.isActive ? "active" : "")
@@ -57,11 +59,13 @@ const ListChap = () => {
               href="y-tien-coc-lam-viec-vat-ba-muoi-nam-ta-bach-nhat-phi-thang/chuong-1"
               className="media-body"
             >
-              <div className="text-overflow-1-lines text-warning">
-                <i class="fa-solid fa-book"></i>
-                {"  "} Chương 01: Tạp dịch đệ tử!
-                <small className="text-muted">(một năm trước)</small>
-              </div>
+              <Link to={"chapter/1"}>
+                <div className="text-overflow-1-lines text-warning">
+                  <i class="fa-solid fa-book"></i>
+                  {"  "} Chương 01: Tạp dịch đệ tử!
+                  <small className="text-muted">(một năm trước)</small>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -71,11 +75,13 @@ const ListChap = () => {
               href="y-tien-coc-lam-viec-vat-ba-muoi-nam-ta-bach-nhat-phi-thang/chuong-1"
               className="media-body"
             >
-              <div className="text-overflow-1-lines text-warning">
-                <i class="fa-solid fa-book"></i>
-                {"  "} Chương 01: Tạp dịch đệ tử!
-                <small className="text-muted">(một năm trước)</small>
-              </div>
+              <Link to={"chapter/1"}>
+                <div className="text-overflow-1-lines text-warning">
+                  <i class="fa-solid fa-book"></i>
+                  {"  "} Chương 01: Tạp dịch đệ tử!
+                  <small className="text-muted">(một năm trước)</small>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -85,11 +91,13 @@ const ListChap = () => {
               href="y-tien-coc-lam-viec-vat-ba-muoi-nam-ta-bach-nhat-phi-thang/chuong-1"
               className="media-body"
             >
-              <div className="text-overflow-1-lines text-warning">
-                <i class="fa-solid fa-book"></i>
-                {"  "} Chương 01: Tạp dịch đệ tử!
-                <small className="text-muted">(một năm trước)</small>
-              </div>
+              <Link to={"chapter/1"}>
+                <div className="text-overflow-1-lines text-warning">
+                  <i class="fa-solid fa-book"></i>
+                  {"  "} Chương 01: Tạp dịch đệ tử!
+                  <small className="text-muted">(một năm trước)</small>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

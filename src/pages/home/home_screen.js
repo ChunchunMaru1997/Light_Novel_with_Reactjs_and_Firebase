@@ -100,6 +100,7 @@ const HomeScreen = () => {
           backgroundSize: "1676px 713px, contain",
         }}
       >
+        <Header />
         <div
           className="body-container"
           style={{

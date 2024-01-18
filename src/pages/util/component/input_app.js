@@ -1,4 +1,7 @@
 import React from "react";
+const textError = {
+  color: "#FF0000",
+};
 
 export default function InputApp(props) {
   return (
@@ -9,9 +12,7 @@ export default function InputApp(props) {
           <input
             type={props.type}
             id="form3Example1c"
-            className={"form-control " + (props.defaultValue ? "active" : "")}
-            value={props.value}
-            defaultValue={props.defaultValue}
+            className="form-control"
             name={props.name}
             onChange={props.onChanged}
           />
@@ -21,7 +22,7 @@ export default function InputApp(props) {
           </label>
         </div>
       </div>
-      <p style={{ color: "#FF0000" }}>{props.error}</p>
+      <p style={textError}>{props.error}</p>
     </div>
   );
 }

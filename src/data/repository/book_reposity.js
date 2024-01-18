@@ -26,15 +26,13 @@ export const createNewBook = async (
       newestChapter: 0,
     });
     return {
-      book: [
-        {
-          id: doc.id,
-          name: bookName,
-          categoryId: bookCategory,
-          author: bookAuthor,
-          detail: bookDetail,
-        },
-      ],
+      book: {
+        id: doc.id,
+        name: bookName,
+        categoryId: bookCategory,
+        author: bookAuthor,
+        detail: bookDetail,
+      },
     };
   } catch (error) {
     console.log(error);
@@ -51,10 +49,6 @@ export const getBook = async (bookId) => {
 
     return {
       bookId: bookId,
-      name: book.name,
-      categoryId: book.categoryId,
-      author: book.author,
-      detail: book.detail,
       newestChap: book.newestChapter,
     };
   } catch (error) {

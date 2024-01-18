@@ -82,10 +82,14 @@ const Header = () => {
             </ul>
           </div>
 
-          <div className=" input-group " style={{ width: "50%" }}>
+          <div className=" input-group container-fluid " hidden>
             <div className="input-input-group" style={{ display: "inherit" }}>
               <div className="form-outline border border-info">
-                <input type="search" id="form1" className="form-control" />
+                <input
+                  type="search"
+                  id="form1"
+                  className="form-control w-100"
+                />
                 <label className="form-label" htmlFor="form1">
                   Tìm kiếm
                 </label>

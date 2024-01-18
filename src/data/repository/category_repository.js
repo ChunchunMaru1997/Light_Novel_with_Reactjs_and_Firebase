@@ -1,16 +1,17 @@
 import { async } from "@firebase/util";
 import {
+  setDoc,
+  doc,
   addDoc,
   collection,
   query,
   orderBy,
+  getDoc,
   getDocs,
-  updateDoc,
-  doc,
-  deleteDoc,
 } from "firebase/firestore";
 import { firebaseStore } from "../remote/config/firebase_config";
-import { CATEGORIES_COLLECTION } from "../remote/config/firebase_constant";
+
+const CATEGORIES_COLLECTION = "categories";
 
 export const createNewCategory = async (categoryName) => {
   try {
@@ -20,30 +21,7 @@ export const createNewCategory = async (categoryName) => {
     return { category: { id: doc.id, name: categoryName } };
   } catch (error) {
     console.log(error);
-    console.log(error.message);
-    return { error: error.message };
-  }
-};
 
-export const editCategory = async (categoryId, categoryName) => {
-  try {
-    updateDoc(doc(firebaseStore, CATEGORIES_COLLECTION, categoryId), {
-      name: categoryName,
-    });
-    return { category: { categoryId: categoryId, name: categoryName } };
-  } catch (error) {
-    console.log(error);
-    console.log(error.message);
-    return { error: error.message };
-  }
-};
-
-export const deleteCategory = async (categoryId) => {
-  try {
-    await deleteDoc(doc(firebaseStore, CATEGORIES_COLLECTION, categoryId));
-    return { category: { categoryId: categoryId } };
-  } catch (error) {
-    console.log(error);
     console.log(error.message);
     return { error: error.message };
   }
